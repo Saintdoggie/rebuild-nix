@@ -19,6 +19,11 @@
       buildInputs = [
         bun
       ];
+        phases = [
+        "unpackPhase"  
+        "buildPhase" 
+        "installPhase"
+    ];
       
 
       buildPhase = ''
@@ -29,11 +34,11 @@
      '';
 
       installPhase = ''
-        mkdir -p $out/bin
+        mkdir -p $out
 
-        cp rebuild $out/bin
+        cp rebuild $out
 
-        chmod +x $out/bin/rebuild
+        chmod +x $out/rebuild
       '';
 
     };
