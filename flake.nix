@@ -34,11 +34,11 @@
      '';
 
       installPhase = ''
-        mkdir -p $out
+        mkdir -p $out/bin
 
-        cp rebuild $out
+        cp rebuild $out/bin
 
-        chmod +x $out/rebuild
+        chmod +x $out/bin/rebuild
       '';
 
     };
